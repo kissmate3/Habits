@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="15dp"
+    android:background="@drawable/custom"
+    >
+
+    <TextView
+        android:id="@+id/item_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="86dp"
+        android:text="text"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_toStartOf="@id/close"
+        android:layout_toLeftOf="@id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:soundEffectsEnabled="true" />
+
+    <CheckBox
+        android:id="@+id/checkbox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/checkbox"
+        android:layout_toLeftOf="@id/checkbox"
+
+        android:soundEffectsEnabled="true" />
+
+    <CheckBox
+        android:id="@+id/checkbox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toStartOf="@id/checkbox2"
+        android:layout_toLeftOf="@id/checkbox2"
+        android:soundEffectsEnabled="true" />
+
+    <CheckBox
+        android:id="@+id/checkbox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/checkbox3"
+        android:layout_toLeftOf="@id/checkbox3"
+        android:soundEffectsEnabled="true"/>
+
+
+    <ImageButton
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="-6dp"
+        android:gravity="end"
+        android:src="@android:drawable/ic_delete" />
+</RelativeLayout>
