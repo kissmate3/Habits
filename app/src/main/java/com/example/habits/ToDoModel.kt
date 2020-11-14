@@ -10,5 +10,4 @@ class ToDoModel{
     var done: Boolean?=false
     var done2: Boolean?=false
     var done3: Boolean?=false
-    var done4: Boolean?=false
 }

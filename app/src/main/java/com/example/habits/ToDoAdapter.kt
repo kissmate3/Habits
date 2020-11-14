@@ -19,7 +19,6 @@ class ToDoAdapter(context: Context,toDoList:MutableList<ToDoModel>) : BaseAdapte
         val done: Boolean = itemList[p0].done as Boolean
         val done2: Boolean = itemList[p0].done2 as Boolean
         val done3: Boolean = itemList[p0].done3 as Boolean
-        val done4: Boolean = itemList[p0].done4 as Boolean
 
         val view: View
         val viewHolder: ListViewHolder
@@ -37,12 +36,10 @@ class ToDoAdapter(context: Context,toDoList:MutableList<ToDoModel>) : BaseAdapte
         viewHolder.isDone.isChecked = done
         viewHolder.isDone2.isChecked = done2
         viewHolder.isDone3.isChecked = done3
-        viewHolder.isDone4.isChecked = done4
 
         viewHolder.isDone.setOnClickListener {
             updateAndDelete.modifyItem(UID, !done)
         }
-
 
         viewHolder.isDone2.setOnClickListener {
             updateAndDelete.modifyItem2(UID, !done2)
@@ -50,10 +47,6 @@ class ToDoAdapter(context: Context,toDoList:MutableList<ToDoModel>) : BaseAdapte
 
         viewHolder.isDone3.setOnClickListener {
             updateAndDelete.modifyItem3(UID, !done3)
-        }
-
-        viewHolder.isDone4.setOnClickListener {
-            updateAndDelete.modifyItem4(UID, !done4)
         }
 
         viewHolder.isDeleted.setOnClickListener{
@@ -85,6 +78,5 @@ private class ListViewHolder(row:View?) {
     val isDone: CheckBox =row!!.findViewById(R.id.checkbox) as CheckBox
     val isDone2: CheckBox =row!!.findViewById(R.id.checkbox2) as CheckBox
     val isDone3: CheckBox =row!!.findViewById(R.id.checkbox3) as CheckBox
-    val isDone4: CheckBox =row!!.findViewById(R.id.checkbox4) as CheckBox
     val isDeleted:ImageButton=row!!.findViewById(R.id.close) as ImageButton
 }
